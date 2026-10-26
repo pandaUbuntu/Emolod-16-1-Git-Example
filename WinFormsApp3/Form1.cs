@@ -17,23 +17,23 @@ namespace WinFormsApp3 {
         }
         private void Calculation(char Operand) {
             label1.Text = Convert.ToString(Operand);
-            if (double.TryParse(textBox1.Text, out double FirstNumber) &&
-                double.TryParse(textBox2.Text, out double SecondNumber)) {
+            if (double.TryParse(textBox1.Text, out double firstNumber) &&
+                double.TryParse(textBox2.Text, out double secondNumber)) {
                 switch (Operand) {
                     case '+':
-                        label4.Text = "= " + (FirstNumber + SecondNumber).ToString("F3");
+                        label4.Text = "= " + (firstNumber + secondNumber).ToString("F3");
                         break;
                     case '-':
-                        label4.Text = "= " + (FirstNumber - SecondNumber).ToString("F3");
+                        label4.Text = "= " + (firstNumber - secondNumber).ToString("F3");
                         break;
                     case '*':
-                        label4.Text = "= " + (FirstNumber * SecondNumber).ToString("F3");
+                        label4.Text = "= " + (firstNumber * secondNumber).ToString("F3");
                         break;
                     case '/':
-                        if (SecondNumber == 0) {
+                        if (secondNumber == 0) {
                             label4.Text = "Помилка: ділення на нуль!";
                         } else {
-                            label4.Text = "= " + (FirstNumber / SecondNumber).ToString("F3");
+                            label4.Text = "= " + (firstNumber / secondNumber).ToString("F3");
                         }
                         break;
                 }
